@@ -1,0 +1,27 @@
+{
+  "name": "oneatatime",
+  "version": "0.0.0",
+  "description": "Ensures that a wrapped async function runs one at a time",
+  "main": "oneatatime.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua T Corbin",
+  "license": "MIT",
+  "scripts": {
+    "jshint": "jshint --verbose --exclude-path .gitignore .",
+    "test": "npm run jshint && istanbul --print=none cover tape test_oneatatime.js | tspec && istanbul report text",
+    "cover": "istanbul cover --report none --print detail tape test_oneatatime.js",
+    "view-cover": "istanbul report html && open ./coverage/index.html"
+  },
+  "dependencies": {
+    "lodash.isfunction": "~2.4.1"
+  },
+  "devDependencies": {
+    "tape": "~2.10.2",
+    "tap-spec": "~0.1.4",
+    "istanbul": "~0.2.6",
+    "async": "^0.2.10",
+    "jshint": "^2.4.4"
+  }
+}
