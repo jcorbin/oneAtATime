@@ -2,7 +2,7 @@ var async = require('async');
 var isFunction = require('lodash.isfunction');
 
 var test = require('tape');
-var oneAtATime = require('./oneatatime');
+var oneAtATime = require('../oneatatime');
 
 function eventually(effect, callback) {
   if (isFunction(effect))

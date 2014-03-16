@@ -10,8 +10,8 @@
   "license": "MIT",
   "scripts": {
     "jshint": "jshint --verbose --exclude-path .gitignore .",
-    "test": "npm run jshint && istanbul --print=none cover tape test_oneatatime.js | tspec && istanbul report text",
-    "cover": "istanbul cover --report none --print detail tape test_oneatatime.js",
+    "test": "npm run jshint && istanbul --print=none cover tape test/oneatatime.js | tspec && istanbul report text",
+    "cover": "istanbul cover --report none --print detail tape test/oneatatime.js",
     "view-cover": "istanbul report html && open ./coverage/index.html"
   },
   "dependencies": {
