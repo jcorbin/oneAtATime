@@ -20,10 +20,11 @@ Instead you:
 ```javascript
 var oneAtATime = require('oneatatime');
 
-setInterval(oneAtATime(function tick() {
+setInterval(oneAtATime(function tick(callback) {
     getSomething(function gotStuff(err, stuff) {
         if (err) console.error('no stuff for us');
         use(stuff);
+        callback();
     });
 }), 1000);
 ```
